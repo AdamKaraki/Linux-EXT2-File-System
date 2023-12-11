@@ -1,0 +1,2 @@
+gcc -w main.c
+./a.out "$1"

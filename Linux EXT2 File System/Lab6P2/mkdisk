@@ -1,0 +1,5 @@
+sudo dd if=/dev/zero of=diskimage bs=1024 count=4096
+sudo mke2fs -b 1024 -I 256 diskimage 4096   # format diskiamge as EXT2FS
+sudo mount diskimage /mnt
+sudo rmdir /mnt/lost+found           # delete the lost+found DIR
+sudo umount /mnt
